@@ -5,10 +5,11 @@ import { SingInComponent } from './components/sing-in/sing-in.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path:'logIn',component:LoginComponent},
   {path:'singIn',component:SingInComponent},
   {path:'dashboard',component:DashboardComponent},
   {path:'logIn',component:LoginComponent},
+  { path: '**', redirectTo: '/singIn' },
+  { path: '', redirectTo: '/singIn', pathMatch: 'full' },
 
 ];
 

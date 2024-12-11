@@ -1,9 +1,9 @@
 <?php
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Origin: *"); // Permitir solicitudes desde cualquier origen
-header("Access-Control-Allow-Headers: Content-Type"); // Permitir encabezados necesarios
+header("Access-Control-Allow-Headers: Content-Type , Authorization"); // Permitir encabezados necesarios
 header("Content-Type: application/json"); // Definir que la respuesta será JSON
-
+header("Access-Control-Allow-Origin: http://localhost:4200");
 // Conexión a la base de datos
 $host = "localhost";
 $dbname = "usuario"; // Nombre de tu base de datos
