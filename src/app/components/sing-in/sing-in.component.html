@@ -1,4 +1,6 @@
+<app-navbar></app-navbar>
 <div class="container">
+
   <h1>Formulario de Registro</h1>
 
   <!-- Formulario de registro -->
@@ -27,9 +29,5 @@
   <div *ngIf="responseMessage" [ngClass]="{ 'text-success': success, 'text-danger': !success }">
     {{ responseMessage }}
   </div>
-  <nav>
-    <a routerLink="/logIn">Login</a> <br>
-    <a routerLink="/singIn">Sing In</a>
-    <a routerLink="/dashboard">Dashboard</a>
-  </nav>
+
 </div>

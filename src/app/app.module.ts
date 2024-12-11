@@ -7,12 +7,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { SingInComponent } from '../app/components/sing-in/sing-in.component';  // Componente de Registro
 import { LoginComponent } from '../app/components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { DevolucionesComponent } from './components/devoluciones/devoluciones.component';
+import { DevolucionesDetalleComponent } from './components/devoluciones-detalle/devoluciones-detalle.component';
+import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
 @NgModule({
   declarations: [
     AppComponent,
     SingInComponent,
     LoginComponent,
-    NavbarComponent  // Declarar el componente de registro
+    NavbarComponent,
+    HomeComponent,
+    DevolucionesComponent,
+    DevolucionesDetalleComponent,
+    ConfiguracionComponent  // Declarar el componente de registro
   ],
   imports: [
     BrowserModule,

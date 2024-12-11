@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Mis Devoluciones</h2>
+    
+    <div *ngFor="let returnItem of returns" class="return-item">
+      <p><strong>Tienda:</strong> {{ returnItem.store }}</p>
+      <p><strong>Fecha de Compra:</strong> {{ returnItem.purchaseDate }}</p>
+      <p><strong>Estado:</strong> {{ returnItem.status }}</p>
+      <button class="btn btn-info" (click)="trackPackage(returnItem.id)">Rastrear Paquete</button>
+    </div>
+  </div>
+  

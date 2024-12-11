@@ -1,0 +1,60 @@
+/* Estilo para centrar el contenido en la página */
+.full-page {
+    height: 100vh; /* Altura completa de la ventana */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    background-color: #f7f7f7; /* Fondo gris claro */
+}
+
+/* Contenedor para el contenido */
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Marca o nombre de la aplicación */
+.brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff; /* Color principal */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none; /* Eliminar subrayado */
+    margin-bottom: 30px; /* Separar del contenido siguiente */
+}
+
+/* Estilo para los enlaces de navegación */
+.nav-links {
+    display: flex; /* Alinea los enlaces horizontalmente */
+    justify-content: center; /* Centra los enlaces */
+    gap: 20px; /* Espacio entre los enlaces */
+}
+
+/* Estilo de los enlaces de navegación */
+.nav-links a {
+    font-size: 1.1rem;
+    color: #007bff; /* Color azul */
+    font-weight: 500;
+    text-decoration: none; /* Eliminar subrayado */
+    padding: 12px 20px; /* Espaciado dentro del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover para los enlaces */
+.nav-links a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Estilo para el enlace activo */
+.nav-links a.active {
+    font-weight: bold;
+    color: #0056b3;
+}

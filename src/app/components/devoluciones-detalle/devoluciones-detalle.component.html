@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>Detalles de Devolución</h2>
+    
+    <p><strong>Tienda:</strong> {{ returnDetails.store }}</p>
+    <p><strong>Fecha de Compra:</strong> {{ returnDetails.purchaseDate }}</p>
+    <p><strong>Fecha de Devolución:</strong> {{ returnDetails.returnDate }}</p>
+    <p><strong>Estado:</strong> {{ returnDetails.status }}</p>
+    
+    <button class="btn btn-info" (click)="trackPackage(returnDetails.id)">Rastrear Paquete</button>
+    <button class="btn btn-success" (click)="activateNotifications(returnDetails.id)">Activar Notificaciones</button>
+  </div>
+  
