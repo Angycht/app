@@ -6,21 +6,28 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SingInComponent } from '../app/components/sing-in/sing-in.component';  // Componente de Registro
 import { LoginComponent } from '../app/components/login/login.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavbarComponent } from '../app/components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { DevolucionesComponent } from './components/devoluciones/devoluciones.component';
 import { DevolucionesDetalleComponent } from './components/devoluciones-detalle/devoluciones-detalle.component';
 import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
+import { ChangePasswordComponent } from '../app/components/change-password/change-password.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 @NgModule({
   declarations: [
     AppComponent,
+    ForgotPasswordComponent,
     SingInComponent,
     LoginComponent,
-    NavbarComponent,
     HomeComponent,
     DevolucionesComponent,
     DevolucionesDetalleComponent,
-    ConfiguracionComponent  // Declarar el componente de registro
+    ConfiguracionComponent,
+    NavbarComponent,
+    DashboardComponent,
+    ChangePasswordComponent,
+    ForgotPasswordComponent, // Declarar el componente de registro
   ],
   imports: [
     BrowserModule,

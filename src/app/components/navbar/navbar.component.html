@@ -1,22 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Gestión de Devoluciones</a>
+    <a class="navbar-brand">Gestión de Devoluciones</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/logIn" routerLinkActive="active">Iniciar sesión</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/singIn" routerLinkActive="active">Registrar</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/devoluciones" routerLinkActive="active">Mis Devoluciones</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/config" routerLinkActive="active">Configuración</a>
-          </li>
+        <div *ngIf="isLoggedIn" class="navbar">
+          <div>
+            <div class="nav-links">
+              <a routerLink="/devoluciones" routerLinkActive="active">Mis Devoluciones</a>
+              <a routerLink="/config" routerLinkActive="active">Configuración</a>
+              <button (click)="logout()" class="btn btn-danger">Cerrar Sesión</button>
+            </div>
+          </div>
+        </div>
+       
       </ul>
     </div>
   </nav>

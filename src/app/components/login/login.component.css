@@ -21,6 +21,8 @@
   /* Estilo para los campos de formulario */
   .form-group {
     margin-bottom: 20px;
+    
+    margin-top: 20px;
   }
   
   .form-group label {
@@ -86,5 +88,33 @@
   div.responseMessage {
     margin-top: 20px;
     text-align: center;
+  }
+  .input-group {
+    display: flex;
+     /* Esto asegura que los elementos hijos se alineen de manera flexible */
+  }
+  
+  .input-group-append {
+    display: flex;
+    align-items: center; /* Esto alinea el contenido verticalmente en el centro */
+    margin-left: -1px; /* Opcional, para evitar que el botón se desplace si el borde de los inputs se ve raro */
+  }
+  
+  .input-group-append button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    
+    
+  }
+  
+  .input-group-append button i {
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  .input-group-append button:hover i {
+    color: #0056b3;
   }
   

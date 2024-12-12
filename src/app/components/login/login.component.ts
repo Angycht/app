@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,14 +15,21 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   responseMessage: string = '';
   success: boolean = false;
+  isPasswordVisible: boolean = false;  // Inicializa la variable para controlar la visibilidad de la contraseña
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {}
+  constructor(private fb: FormBuilder, private http: HttpClient, private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {
+    // Crear el formulario con validaciones
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
+  }
+
+  // Método para alternar la visibilidad de la contraseña
+  togglePasswordVisibility(): void {
+    this.isPasswordVisible = !this.isPasswordVisible;
   }
 
   // Método para enviar el formulario
@@ -50,6 +59,8 @@ export class LoginComponent implements OnInit {
         if (response.status === 'success') {
           this.responseMessage = response.message;
           this.success = true;
+          this.authService.login(); // Marca como autenticado
+          this.router.navigate(['/dashboard']); // Redirige al dashboard
         } else {
           this.responseMessage = response.message;
           this.success = false;

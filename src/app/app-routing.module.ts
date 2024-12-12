@@ -7,6 +7,8 @@ import { DevolucionesComponent } from './components/devoluciones/devoluciones.co
 import { DevolucionesDetalleComponent } from './components/devoluciones-detalle/devoluciones-detalle.component';
 import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
 import { HomeComponent } from './components/home/home.component';
+import { ChangePasswordComponent } from './components/change-password/change-password.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 const routes: Routes = [
   {path:'singIn',component:SingInComponent},
@@ -16,6 +18,8 @@ const routes: Routes = [
   {path:'config',component:ConfiguracionComponent},
   {path:'home',component:HomeComponent},
   {path:'logIn',component:LoginComponent},
+  {path:'forgot',component:ForgotPasswordComponent},
+  {path:'change-password',component:ChangePasswordComponent},
   { path: '**', redirectTo: '/home' },
   { path: '', redirectTo: '/singIn', pathMatch: 'full' },
 
