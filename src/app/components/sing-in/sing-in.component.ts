@@ -16,42 +16,32 @@ export class SingInComponent {
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.registroForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
-      repetir: ['', [Validators.required]]
+      nombre: ['', [Validators.required, Validators.maxLength(100)]],
+      apellidos: ['', [Validators.required, Validators.maxLength(100)]],
+      direccion: ['', [Validators.maxLength(255)]],
+      contrasenia: ['', [Validators.required, Validators.minLength(6)]],
+      telefono: ['', [Validators.required, Validators.pattern(/^[0-9]{9}$/)]],
+      correo: ['', [Validators.required, Validators.email]],
     });
   }
 
-  // Método de envío del formulario
   onSubmit() {
-    if (this.registroForm.invalid) {
-      this.responseMessage = 'Por favor, completa todos los campos correctamente.';
-      this.success = false;
-      return;
+    if (this.registroForm.valid) {
+      const usuarioData = this.registroForm.value;
+      this.http
+        .post('http://localhost:8080/devoluciones/api/usuarios', usuarioData) // Cambia la URL según tu API
+        .subscribe({
+          next: (response) => {
+            console.log('Usuario creado:', response);
+            alert('Usuario creado con éxito');
+          },
+          error: (err) => {
+            console.error('Error al crear el usuario:', err);
+            alert('Error al crear el usuario');
+          },
+        });
+    } else {
+      alert('Formulario inválido. Revisa los campos.');
     }
-
-    const formData = this.registroForm.value;
-
-    this.http.post('http://localhost/LogIn/registro.php', formData).pipe(
-      catchError((error) => {
-        // Si hay un error, mostrar el mensaje de error específico
-        let errorMessage = 'Error al conectar con el servidor.';
-        if (error.error && error.error.message) {
-          errorMessage = error.error.message; // Obtener el mensaje de error enviado desde el servidor
-        } else if (error.status === 0) {
-          errorMessage = 'No se pudo conectar con el servidor. Verifique la conexión.';
-        } else {
-          errorMessage = `Error desconocido: ${error.statusText}`;
-        }
-        this.responseMessage = errorMessage;
-        this.success = false;
-        return throwError(error);
-      })
-    ).subscribe(
-      (response: any) => {
-        this.responseMessage = response.message;
-        this.success = response.status === 'success';
-      }
-    );
   }
 }
