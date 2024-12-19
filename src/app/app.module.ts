@@ -3,29 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'; // Importar HttpClientModule
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { SingInComponent } from '../app/components/sing-in/sing-in.component';  // Componente de Registro
+import { AppRoutingModule } from './app-routing.module'; // Componente de Registro
 import { LoginComponent } from '../app/components/login/login.component';
-import { NavbarComponent } from '../app/components/navbar/navbar.component';
-import { HomeComponent } from './components/home/home.component';import { DevolucionesDetalleComponent } from './components/devoluciones-detalle/devoluciones-detalle.component';
-import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
-import { ChangePasswordComponent } from '../app/components/change-password/change-password.component';
+import { HomeComponent } from './components/home/home.component';import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+
 import { ListaDevolucionesComponent } from './components/lista-devoluciones/lista-devoluciones.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
     ConfiguracionComponent,
     DashboardComponent,
     LoginComponent,
-    SingInComponent,
-    ChangePasswordComponent,
-    ForgotPasswordComponent,
+    
     ListaDevolucionesComponent,
-    NavbarComponent,
-    DevolucionesDetalleComponent,
     HomeComponent,
+    UsuarioComponent,
+    NavbarComponent,
      // Declarar el componente de registro
   ],
   imports: [

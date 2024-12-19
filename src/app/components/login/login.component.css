@@ -1,120 +1,49 @@
-/* Contenedor principal del formulario */
-.container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-  }
-  
-  /* Título del formulario */
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-  }
-  
-  
-  /* Estilo para los campos de formulario */
-  .form-group {
-    margin-bottom: 20px;
-    
-    margin-top: 20px;
-  }
-  
-  .form-group label {
-    font-weight: bold;
-    color: #555;
-    display: block;
-    margin-bottom: 8px;
-    font-size: 16px;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #fff;
-    transition: border-color 0.3s ease;
-  }
-  
-  /* Foco en los campos de formulario */
-  .form-control:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-  }
-  
-  /* Botón de submit */
-  button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Deshabilitar el botón cuando el formulario es inválido */
-  button[type="submit"]:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  /* Mensajes de respuesta */
-  .text-success {
-    color: #28a745;
-    font-weight: bold;
-  }
-  
-  .text-danger {
-    color: #dc3545;
-    font-weight: bold;
-  }
-  
-  div.responseMessage {
-    margin-top: 20px;
-    text-align: center;
-  }
-  .input-group {
-    display: flex;
-     /* Esto asegura que los elementos hijos se alineen de manera flexible */
-  }
-  
-  .input-group-append {
-    display: flex;
-    align-items: center; /* Esto alinea el contenido verticalmente en el centro */
-    margin-left: -1px; /* Opcional, para evitar que el botón se desplace si el borde de los inputs se ve raro */
-  }
-  
-  .input-group-append button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    
-    
-  }
-  
-  .input-group-append button i {
-    font-size: 1.5rem;
-    color: #007bff;
-  }
-  
-  .input-group-append button:hover i {
-    color: #0056b3;
-  }
-  
+/* src/app/login/login.component.css */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}

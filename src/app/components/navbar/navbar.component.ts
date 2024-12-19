@@ -12,15 +12,8 @@ export class NavbarComponent implements OnInit {
   isLoggedIn: boolean = false;
 
   constructor(private authService: AuthService, private router: Router) {}
-
   ngOnInit(): void {
-    // Verificar si el usuario está autenticado
-    this.isLoggedIn = this.authService.isLoggedIn();
+    throw new Error('Method not implemented.');
   }
 
-  logout(): void {
-    this.authService.logout();
-    this.isLoggedIn = false;
-    this.router.navigate(['/logIn']);
-  }
 }

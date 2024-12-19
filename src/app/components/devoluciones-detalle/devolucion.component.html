@@ -1,0 +1,19 @@
+<!-- devoluciones.component.html -->
+<table *ngIf="!loading && devoluciones.length > 0">
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Razón</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let devolucion of devoluciones">
+      <td>{{ devolucion.producto }}</td>
+      <td>{{ devolucion.razon }}</td>
+      <td>{{ devolucion.fecha | date: 'yyyy-MM-dd' }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="loading">Cargando devoluciones...</div>

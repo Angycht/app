@@ -5,17 +5,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <div *ngIf="isLoggedIn" class="navbar">
           <div>
             <div class="nav-links">
-              <a routerLink="/devoluciones" routerLinkActive="active">Mis Devoluciones</a>
+              <a routerLink="/devoluciones-detalle" routerLinkActive="active">Mis Devoluciones</a>
               <a routerLink="/config" routerLinkActive="active">Configuración</a>
-              <button (click)="logout()" class="btn btn-danger">Cerrar Sesión</button>
             </div>
           </div>
-        </div>
        
       </ul>
     </div>
   </nav>
-  

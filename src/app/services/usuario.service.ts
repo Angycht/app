@@ -1,16 +1,19 @@
-
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
+  private apiUrl = 'http://localhost:8080/devoluciones/api/usuarios';  // Aquí la URL de tu backend
 
-  url= 'http://localhost/app/src/app/php/registro';
+  constructor(private http: HttpClient) { }
 
-  constructor(private http:HttpClient) { }
-
-  registrar(){
-    return this.http.get(`${this.url}registro.php`);
+  // Crear un nuevo usuario
+  crearUsuario(usuario: any): Observable<any> {
+    return this.http.post(this.apiUrl, usuario);
   }
-}
+    ;
+  }
+

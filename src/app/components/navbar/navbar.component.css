@@ -1,98 +1,98 @@
 /* Estilos generales para la barra de navegación */
 .navbar {
-  background-color: #f8f9fa; /* Fondo gris claro */
-  border-bottom: 1px solid #ddd; /* Borde inferior para mayor definición */
-}
-
-/* Estilos para la marca de la aplicación */
-.navbar-brand {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #007bff; /* Color azul */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-
-/* Espaciado entre los elementos de navegación */
-.navbar-nav {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between; /* Para distribuir los elementos */
-}
-
-/* Enlaces de navegación */
-.nav-links a {
-  font-size: 1rem;
-  color: #007bff;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-/* Efecto hover para los enlaces */
-.nav-links a:hover {
-  background-color: #007bff;
-  color: white;
-}
-
-/* Estilo para el enlace activo */
-.nav-links a.active {
-  color: #0056b3;
-  font-weight: bold;
-}
-
-/* Estilos para el contenedor de los enlaces de navegación */
-.nav-links {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 15px;
-}
-
-/* Estilo para el botón de Cerrar Sesión */
-.nav-links button {
-  background-color: #dc3545; /* Rojo */
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* Efecto hover para el botón de Cerrar Sesión */
-.nav-links button:hover {
-  background-color: #c82333;
-}
-
-/* Alineación del botón de Cerrar Sesión a la derecha */
-.navbar-nav {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.navbar-nav .nav-links {
-  margin-left: auto; /* Esto empuja la sección de links hacia la derecha */
-}
-
-/* Para asegurarse que el navbar se vea bien en pantallas pequeñas */
-@media (max-width: 768px) {
+    background-color: #f8f9fa; /* Fondo gris claro */
+    border-bottom: 1px solid #ddd; /* Borde inferior para mayor definición */
+  }
+  
+  /* Estilos para la marca de la aplicación */
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff; /* Color azul */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+  
+  /* Espaciado entre los elementos de navegación */
   .navbar-nav {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between; /* Para distribuir los elementos */
   }
-
+  
+  /* Enlaces de navegación */
+  .nav-links a {
+    font-size: 1rem;
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efecto hover para los enlaces */
+  .nav-links a:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Estilo para el enlace activo */
+  .nav-links a.active {
+    color: #0056b3;
+    font-weight: bold;
+  }
+  
+  /* Estilos para el contenedor de los enlaces de navegación */
   .nav-links {
-    flex-direction: column;
-    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
   }
-
+  
+  /* Estilo para el botón de Cerrar Sesión */
   .nav-links button {
-    width: 100%; /* Hacer que el botón de Cerrar Sesión ocupe todo el ancho en pantallas pequeñas */
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
-}
+  
+  /* Efecto hover para el botón de Cerrar Sesión */
+  .nav-links button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Alineación del botón de Cerrar Sesión a la derecha */
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-links {
+    margin-left: auto; /* Esto empuja la sección de links hacia la derecha */
+  }
+  
+  /* Para asegurarse que el navbar se vea bien en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .nav-links button {
+      width: 100%; /* Hacer que el botón de Cerrar Sesión ocupe todo el ancho en pantallas pequeñas */
+    }
+  }

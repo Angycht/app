@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Registro</h2>
+    <form (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" class="form-control" [(ngModel)]="usuario.nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" class="form-control" [(ngModel)]="usuario.apellidos" name="apellidos" required>
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" class="form-control" [(ngModel)]="usuario.direccion" name="direccion">
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" class="form-control" [(ngModel)]="usuario.telefono" name="telefono" required>
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" class="form-control" [(ngModel)]="usuario.correo" name="correo" required>
+      </div>
+      <div class="form-group">
+        <label for="contrasenia">Contraseña:</label>
+        <input type="password" id="contrasenia" class="form-control" [(ngModel)]="usuario.contrasenia" name="contrasenia" required>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!usuarioForm.form.valid">Crear Usuario</button>
+    </form>
+  </div>
+  
