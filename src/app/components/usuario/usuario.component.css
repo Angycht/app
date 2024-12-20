@@ -1,0 +1,101 @@
+/* Contenedor Principal */
+.container {
+  max-width: 500px;
+  margin: 20px auto;
+  margin-top: 5%;
+  padding: 20px;
+  background-color: #f8f9fa; /* Fondo claro */
+  border: 1px solid #dee2e6; /* Borde suave */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #343a40; /* Texto oscuro */
+}
+
+/* Grupos de Formulario */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Etiquetas */
+label {
+  font-weight: 500;
+  color: #495057; /* Color de etiqueta */
+}
+
+/* Campos de Entrada */
+.form-control {
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  border: 1px solid #ced4da; /* Borde */
+  color: #495057; /* Texto */
+}
+
+.form-control:focus {
+  border-color: #80bdff; /* Borde azul al enfocar */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Sombra */
+  outline: none; /* Sin contorno adicional */
+}
+
+/* Botones */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; /* Azul Bootstrap */
+  border-color: #007bff; /* Borde azul */
+  font-size: 1rem; /* Tamaño de fuente */
+  color: white; /* Texto blanco */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-top: 10px;
+}
+
+.btn-primary:disabled {
+  background-color: #6c757d; /* Gris para deshabilitado */
+  border-color: #6c757d;
+}
+
+/* Botón Secundario (Opcional, como Ver Contraseña) */
+.input-group .btn {
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: #ffffff; /* Fondo blanco */
+  color: #6c757d; /* Texto gris */
+  border: 1px solid #ced4da; /* Borde */
+  border-radius: 0 5px 5px 0; /* Bordes del botón secundario */
+  margin-bottom: 10px;
+}
+
+.input-group .btn:hover {
+  background-color: #f8f9fa; /* Fondo claro */
+  color: #343a40; /* Texto oscuro */
+  margin-bottom: 10px;
+}
+
+/* Grupo de Entrada */
+.input-group {
+  position: relative;
+}
+
+.input-group .form-control {
+  border-radius: 5px 0 0 5px; /* Bordes para input en grupo */
+}
+
+/* Botón de Foco */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra al enfocar */
+}
+
+/* Mensajes de Error */
+.error {
+  margin-top: 10px;
+  color: #dc3545; /* Rojo Bootstrap */
+  font-weight: bold;
+  text-align: center;
+}

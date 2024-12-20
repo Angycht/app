@@ -1,49 +1,93 @@
-/* src/app/login/login.component.css */
+/* Contenedor Principal */
 .login-container {
-  max-width: 400px;
+  max-width: 500px;
   margin: 50px auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background: #f9f9f9;
+  background-color: #f8f9fa; /* Fondo claro */
+  border: 1px solid #dee2e6; /* Borde suave */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  font-family: Arial, sans-serif; /* Fuente consistente */
 }
 
+/* Título */
 h2 {
   text-align: center;
+  margin-bottom: 20px;
+  color: #343a40; /* Texto oscuro */
 }
 
+/* Grupos de Formulario */
 .form-group {
   margin-bottom: 15px;
 }
 
+/* Etiquetas */
 label {
-  display: block;
-  font-weight: bold;
+  font-weight: 500;
+  color: #495057; /* Color de etiqueta */
+  margin-bottom: 5px;
+  display: block; /* Etiqueta en bloque */
 }
 
-input {
+/* Campos de Entrada */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  font-size: 1rem;
+  border: 1px solid #ced4da; /* Borde suave */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #ffffff; /* Fondo blanco */
+  color: #495057; /* Texto oscuro */
 }
 
-button {
+input:focus {
+  border-color: #80bdff; /* Borde azul */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Sombra al enfocar */
+  outline: none;
+}
+
+/* Botón Primario */
+button[type="submit"] {
   width: 100%;
   padding: 10px;
-  background: #007bff;
-  color: #fff;
+  background-color: #007bff; /* Azul Bootstrap */
   border: none;
+  color: white; /* Texto blanco */
+  font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
 }
 
-button:hover {
-  background: #0056b3;
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Azul más oscuro */
 }
 
-.error {
-  color: red;
+/* Botón Secundario */
+.btn-outline-secondary {
+  width: 50%; /* Botón al ancho completo */
+  background-color: #ffffff; /* Fondo blanco */
+  color: #6c757d; /* Texto gris */
+  border: 1px solid #6c757d; /* Borde gris */
+  font-size: 0.9rem;
   margin-top: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f8f9fa; /* Fondo claro */
+  color: #343a40; /* Texto oscuro */
+}
+
+/* Mensaje de Error */
+.error {
+  margin-top: 10px;
+  color: #dc3545; /* Rojo Bootstrap */
+  font-weight: bold;
+  text-align: center;
 }

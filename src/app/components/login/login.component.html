@@ -16,15 +16,21 @@
 
     <div class="form-group">
       <label for="contrasenia">Contraseña</label>
-      <input
-        type="password"
-        id="contrasenia"
-        [(ngModel)]="loginData.contrasenia"
-        name="contrasenia"
-        required
-      />
+       <input 
+      [attr.type]="showPassword ? 'text' : 'password'" 
+      id="contrasenia" 
+      class="form-control" 
+      [(ngModel)]="loginData.contrasenia" 
+      name="contrasenia" 
+      required>
     </div>
-
+    <button 
+    type="button" 
+    class="btn btn-outline-secondary" 
+    (click)="togglePasswordVisibility()" 
+    aria-label="Toggle password visibility">
+    {{ showPassword ? 'Ocultar Contraseña' : 'Ver Contraseña' }}
+  </button>
     <button type="submit">Iniciar Sesión</button>
     <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
   </form>

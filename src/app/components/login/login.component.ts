@@ -11,9 +11,11 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   loginData = { correo: '', contrasenia: '' };
   errorMessage = '';
-
+  showPassword = false;
   constructor(private authService: AuthService, private router: Router) {}
-
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
   onSubmit() {
     this.authService.login(this.loginData.correo, this.loginData.contrasenia).subscribe(
       (response) => {

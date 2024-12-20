@@ -14,10 +14,13 @@ export class UsuarioComponent {
     telefono: '',
     correo: '',
     contrasenia: ''
+   
   };
-
+ showPassword = false;
   constructor(private usuarioService: UsuarioService) { }
-
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
   onSubmit() {
     this.usuarioService.crearUsuario(this.usuario).subscribe(
       (response) => {

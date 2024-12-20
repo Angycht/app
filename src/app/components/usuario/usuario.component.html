@@ -23,7 +23,21 @@
       </div>
       <div class="form-group">
         <label for="contrasenia">Contraseña:</label>
-        <input type="password" id="contrasenia" class="form-control" [(ngModel)]="usuario.contrasenia" name="contrasenia" required>
+        <input 
+        [attr.type]="showPassword ? 'text' : 'password'" 
+        id="contrasenia" 
+        class="form-control" 
+        [(ngModel)]="usuario.contrasenia" 
+        name="contrasenia" 
+        required>
+      </div> <div class="input-group-append">
+        <button 
+          type="button" 
+          class="btn btn-outline-secondary" 
+          (click)="togglePasswordVisibility()" 
+          aria-label="Toggle password visibility">
+          {{ showPassword ? 'Ocultar Contraseña' : 'Ver Contraseña' }}
+        </button>
       </div>
       <button type="submit" class="btn btn-primary" [disabled]="!usuarioForm.form.valid">Crear Usuario</button>
     </form>
